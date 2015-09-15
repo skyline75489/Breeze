@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2DB7A4A11BA672C10035F588 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7A4A01BA672C10035F588 /* main.m */; };
 		2DB7A4AD1BA673550035F588 /* BRInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7A4AC1BA673550035F588 /* BRInjector.m */; };
+		2DB7A4B51BA7AB870035F588 /* CarImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7A4B01BA7AB870035F588 /* CarImpl.m */; };
+		2DB7A4B61BA7AB870035F588 /* DashboardImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7A4B21BA7AB870035F588 /* DashboardImpl.m */; };
+		2DB7A4B71BA7AB870035F588 /* EngineImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB7A4B41BA7AB870035F588 /* EngineImpl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,9 +30,17 @@
 		2DB7A49D1BA672C10035F588 /* BreezeDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BreezeDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB7A4A01BA672C10035F588 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2DB7A4A71BA673230035F588 /* Breeze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Breeze.h; path = ../../BreezeCore/Breeze.h; sourceTree = "<group>"; };
-		2DB7A4A81BA673230035F588 /* BRInjectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRInjectable.h; path = ../../BreezeCore/BRInjectable.h; sourceTree = "<group>"; };
 		2DB7A4AB1BA673550035F588 /* BRInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRInjector.h; path = ../../BreezeCore/BRInjector.h; sourceTree = "<group>"; };
 		2DB7A4AC1BA673550035F588 /* BRInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRInjector.m; path = ../../BreezeCore/BRInjector.m; sourceTree = "<group>"; };
+		2DB7A4AF1BA7AB870035F588 /* CarImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarImpl.h; path = Classes/CarImpl.h; sourceTree = "<group>"; };
+		2DB7A4B01BA7AB870035F588 /* CarImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarImpl.m; path = Classes/CarImpl.m; sourceTree = "<group>"; };
+		2DB7A4B11BA7AB870035F588 /* DashboardImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashboardImpl.h; path = Classes/DashboardImpl.h; sourceTree = "<group>"; };
+		2DB7A4B21BA7AB870035F588 /* DashboardImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardImpl.m; path = Classes/DashboardImpl.m; sourceTree = "<group>"; };
+		2DB7A4B31BA7AB870035F588 /* EngineImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineImpl.h; path = Classes/EngineImpl.h; sourceTree = "<group>"; };
+		2DB7A4B41BA7AB870035F588 /* EngineImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EngineImpl.m; path = Classes/EngineImpl.m; sourceTree = "<group>"; };
+		2DB7A4B91BA7AB9A0035F588 /* CarProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarProtocol.h; path = Protocols/CarProtocol.h; sourceTree = "<group>"; };
+		2DB7A4BA1BA7AB9A0035F588 /* DashboardProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashboardProtocol.h; path = Protocols/DashboardProtocol.h; sourceTree = "<group>"; };
+		2DB7A4BB1BA7AB9A0035F588 /* EngineProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineProtocol.h; path = Protocols/EngineProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +60,6 @@
 				2DB7A4AB1BA673550035F588 /* BRInjector.h */,
 				2DB7A4AC1BA673550035F588 /* BRInjector.m */,
 				2DB7A4A71BA673230035F588 /* Breeze.h */,
-				2DB7A4A81BA673230035F588 /* BRInjectable.h */,
 				2DB7A49F1BA672C10035F588 /* BreezeDemo */,
 				2DB7A49E1BA672C10035F588 /* Products */,
 			);
@@ -66,9 +76,34 @@
 		2DB7A49F1BA672C10035F588 /* BreezeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2DB7A4B81BA7AB8D0035F588 /* Protocols */,
+				2DB7A4AE1BA7AA2E0035F588 /* Classes */,
 				2DB7A4A01BA672C10035F588 /* main.m */,
 			);
 			path = BreezeDemo;
+			sourceTree = "<group>";
+		};
+		2DB7A4AE1BA7AA2E0035F588 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2DB7A4AF1BA7AB870035F588 /* CarImpl.h */,
+				2DB7A4B01BA7AB870035F588 /* CarImpl.m */,
+				2DB7A4B11BA7AB870035F588 /* DashboardImpl.h */,
+				2DB7A4B21BA7AB870035F588 /* DashboardImpl.m */,
+				2DB7A4B31BA7AB870035F588 /* EngineImpl.h */,
+				2DB7A4B41BA7AB870035F588 /* EngineImpl.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		2DB7A4B81BA7AB8D0035F588 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2DB7A4B91BA7AB9A0035F588 /* CarProtocol.h */,
+				2DB7A4BA1BA7AB9A0035F588 /* DashboardProtocol.h */,
+				2DB7A4BB1BA7AB9A0035F588 /* EngineProtocol.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB7A4B61BA7AB870035F588 /* DashboardImpl.m in Sources */,
 				2DB7A4AD1BA673550035F588 /* BRInjector.m in Sources */,
 				2DB7A4A11BA672C10035F588 /* main.m in Sources */,
+				2DB7A4B71BA7AB870035F588 /* EngineImpl.m in Sources */,
+				2DB7A4B51BA7AB870035F588 /* CarImpl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

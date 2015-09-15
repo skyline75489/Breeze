@@ -5,8 +5,10 @@
 
 @property(nonatomic, strong) NSMutableArray *registeredProtocols;
 @property(nonatomic, strong) NSMutableDictionary *protoImplByName;
+@property(nonatomic, strong) NSMutableDictionary *instanceCache;
 
 @end
+
 @implementation BRInjector
 
 - (instancetype)init {
@@ -14,7 +16,9 @@
     if (self) {
         self.registeredProtocols = [[NSMutableArray alloc] init];
         self.protoImplByName = [[NSMutableDictionary alloc] init];
+        self.instanceCache = [[NSMutableDictionary alloc] init];
     }
+    
     return self;
     
 }
@@ -44,9 +48,16 @@
 }
 
 - (id)getObject:(Protocol *)protocol {
-    Class klass = self.protoImplByName[NSStringFromProtocol(protocol)];
-    id instance = [[klass alloc] init];
+    NSString *protoName = NSStringFromProtocol(protocol);
     
+    Class klass = self.protoImplByName[protoName];
+    id instance = nil;
+    if (self.instanceCache[protoName] != nil) {
+        instance = self.instanceCache[protoName];
+    } else {
+        instance = [[klass alloc] init];
+        [self.instanceCache setObject:instance forKey:protoName];
+    }
     return instance;
 }
 
