@@ -36,12 +36,13 @@
 
 - (void)injectImplOfClass:(Class)klass withProtocol:(Protocol *)protocol {
     if (![klass conformsToProtocol:protocol]) {
-        return;
+        @throw [NSException exceptionWithName: NSInternalInconsistencyException reason:  [NSString stringWithFormat:@"%@ does not conform to %@", NSStringFromClass(klass), NSStringFromProtocol(protocol)] userInfo:nil];
     }
     
     NSString *protoName = NSStringFromProtocol(protocol);
     if (self.protoImplByName[protoName] != nil ) {
-        return;
+        @throw [NSException exceptionWithName: NSInternalInconsistencyException reason:  [NSString stringWithFormat:@"%@ has already been injected", NSStringFromProtocol(protocol)] userInfo:nil];
+
     }
     
     [self.protoImplByName setObject:klass forKey:protoName];
@@ -56,6 +57,10 @@
         instance = self.instanceCache[protoName];
     } else {
         instance = [[klass alloc] init];
+        if (instance == nil) {
+            @throw [NSException exceptionWithName: NSInternalInconsistencyException reason:  [NSString stringWithFormat:@"%@ is used before injected", NSStringFromProtocol(protocol)] userInfo:nil];
+
+        }
         [self.instanceCache setObject:instance forKey:protoName];
     }
     return instance;

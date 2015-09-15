@@ -19,7 +19,7 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
+        
         [[BRInjector sharedInstance] injectImplOfClass:[CarImpl class] withProtocol:@protocol(CarProtocol)];
         [[BRInjector sharedInstance] injectImplOfClass:[DashboardImpl class] withProtocol:@protocol(DashboardProtocol)];
         [[BRInjector sharedInstance] injectImplOfClass:[EngineImpl class] withProtocol:@protocol(EngineProtocol)];
