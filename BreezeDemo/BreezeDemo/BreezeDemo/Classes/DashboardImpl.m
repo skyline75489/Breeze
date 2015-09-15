@@ -4,6 +4,8 @@
 
 @implementation DashboardImpl
 
+@synthesize engine;
+
 -(instancetype)init{
     self = [super init];
     if (self) {

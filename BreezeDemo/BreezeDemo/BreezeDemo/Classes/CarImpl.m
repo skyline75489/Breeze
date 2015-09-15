@@ -12,7 +12,6 @@
     if (self) {
         self.engine = [[BRInjector sharedInstance] getObject:@protocol(EngineProtocol)];
         self.dashboard = [[BRInjector sharedInstance] getObject:@protocol(DashboardProtocol)];
-
     }
     
     return self;
@@ -29,8 +28,4 @@
     [self.dashboard display];
 }
 
-- (void)afterPropertiesSet {
-    NSLog(@"Car is fully set up and operational!");
-    
-}
 @end
